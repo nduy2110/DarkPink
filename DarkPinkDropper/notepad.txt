@@ -1,0 +1,2 @@
+i686-w64-mingw32-gcc -m32 -shared -o test.dll test.c vcruntime140.def -s
+rundll32.exe vcruntime140.dll,memcpy 123
