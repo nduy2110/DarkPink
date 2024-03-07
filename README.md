@@ -21,7 +21,7 @@ Lê Trọng Phúc: Web Phshing
 ### Stealer
 
 - Chổ này có mã hóa nên để crypto làm (Thắng, Quốc)
-- Code powershell script, xong mã hóa rồi lưu vào thanh ghi nhé
+- Code powershell script, xong mã hóa rồi lưu vào tmp nhé
 
 ### Evasion với Lateral
 - Kịp thì làm thêm
