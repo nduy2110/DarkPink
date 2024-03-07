@@ -1,4 +1,4 @@
-$outputDirectory = Join-Path $env:temp "execute_cmd"
+$outputDirectory = Join-Path $env:temp "bee96b3468e219f06905b1ceaa1d4902"
 
 if (-not (Test-Path -Path $outputDirectory -PathType Container)) {
     New-Item -ItemType Directory -Path $outputDirectory -Force
