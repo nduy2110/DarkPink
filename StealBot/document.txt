@@ -1,1 +1,0 @@
-`/exec powershell cat "C:\Users\gnol2003\AppData\Local\Temp\207812f09349ef96b709cfe8d7e295ba\secret.wav"`
