@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cang_Cot_Bot_1.2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef9a005de3aff88af1957992f5e289633b16129c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de972fd07d8e130fc2a1936ce73486625af2d0f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cang_Cot_Bot_1.2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cang_Cot_Bot_1.2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
