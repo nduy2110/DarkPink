@@ -1,0 +1,2 @@
+C:\Users\Acer\source\repos\Cang_Cot_Bot_1.2\Cang_Cot_Bot_1.2\bin\Release\net8.0\win-x64\app.publish\Cang_Cot_Bot_1.2.pdb
+C:\Users\Acer\source\repos\Cang_Cot_Bot_1.2\Cang_Cot_Bot_1.2\bin\Release\net8.0\win-x64\app.publish\Cang_Cot_Bot_1.2.exe
