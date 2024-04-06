@@ -1,0 +1,7 @@
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\TeleBot_CangCot.exe
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\TeleBot_CangCot.dll
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\TeleBot_CangCot.deps.json
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\TeleBot_CangCot.runtimeconfig.json
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\TeleBot_CangCot.pdb
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\Newtonsoft.Json.dll
+C:\Users\Acer\source\repos\TeleBot_CangCot\TeleBot_CangCot\bin\Release\net8.0\app.publish\Telegram.Bot.dll
