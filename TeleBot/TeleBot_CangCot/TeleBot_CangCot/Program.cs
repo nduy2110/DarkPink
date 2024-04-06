@@ -75,7 +75,7 @@ namespace TeleBot_CangCot
                                     string resultText = ExecuteCommand(cmd);
                                     SendMessage(chatId, text, resultText);
                                 }
-                                else if (text.StartsWith("/getFile"))
+                                else if (text.StartsWith("/getfile"))
                                 {
                                     string filePath = text.Substring(9);
                                     if (filePath != null)
