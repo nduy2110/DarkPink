@@ -283,4 +283,3 @@ if(!(test-path $path)) {
     New-Item -ItemType Directory -Force -Path $path
 }
 Get-ChildItem C:\Users | ForEach-Object {Get-BrowserData -UserName $_.Name -ErrorAction SilentlyContinue} | Export-Csv $path\BrowserHistory.csv -NoTypeInformation -Force
-

