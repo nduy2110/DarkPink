@@ -1,5 +1,0 @@
-forfiles.exe /p %SystemRoot%\system32 /m notepad.exe /c "cmd.exe /c whoami >> %appdata%\a.abcd && %appdata%\a.abcd && exit"
-
-reg add HKCU\SOFTWARE\Classes\abcdfile\shell\open\command /ve /d "calc.exe" /f
-reg add HKEY_CURRENT_USER\Software\Classes\.abcd\OpenWithProgids /v abcdfile /t REG_NONE /d "" /f
-
